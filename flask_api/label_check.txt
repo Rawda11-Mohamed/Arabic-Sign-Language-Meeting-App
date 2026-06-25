@@ -1,0 +1,89 @@
+=== Cell 4 ===
+# Cell 4: Dataset exploration
+# Explore dataset structure
+def explore_dataset(base_path):
+    """Explore the dataset structure and extract class information"""
+
+    video_extensions = ['.mp4', '.avi', '.mov', '.mkv', '.wmv']
+    class_info = {}
+
+    for root, dirs, files in os.walk(base_path):
+        for file in files:
+            if any(file.lower().endswith(ext) for ext in video_extensions):
+                class_name = os.path.basename(root)
+                if class_name not in class_info:
+                    class_info[class_name] = []
+                class_info[class_name].append(os.path.join(root, file))
+
+    return class_info
+
+# Explore dataset
+dataset_info = explore_dataset(path)
+print(f"📊 Dataset structure: {len(dataset_info)} classes found")
+
+# Display class distribution
+for class_name, videos in dataset_info.items():
+    print(f"  {class_name}: {len(videos)} videos")
+
+# Define the 12 Arabic phrases based on the dataset description
+ARABIC_PHRASES = [
+    "Alhamdulillah", "Good bye", "Good evening", "Good morning",
+    "How are you", "I am fine", "I am pleased to meet you", "I am sorry",
+    "Not bad", "Salam aleikum", "Sorry", "Thanks"
+]
+
+print(f"🎯 Expected phrases: {ARABIC_PHRASES}")
+
+=== Cell 7 ===
+# Cell 7: Create dataset from videos
+def create_video_dataset(dataset_info, samples_per_class=20, sequence_length=15):
+    """Create dataset from video files"""
+    video_processor = VideoProcessor(sequence_length=sequence_length)
+
+    X = []
+    y = []
+    class_mapping = {}
+    reverse_mapping = {}
+
+    # Create class mapping
+    for idx, class_name in enumerate(dataset_info.keys()):
+        class_mapping[class_name] = idx
+        reverse_mapping[idx] = class_name
+
+    print("🔄 Processing videos and extracting features...")
+
+    for class_name, video_paths in dataset_info.items():
+        print(f"Processing class: {class_name}")
+        class_id = class_mapping[class_name]
+
+        # Limit samples per class
+        video_samples = video_paths[:samples_per_class]
+
+        for video_path in video_samples:
+            try:
+                sequence = video_processor.extract_features_from_video(video_path)
+                X.append(sequence)
+                y.append(class_id)
+                print(f"  ✅ Processed: {os.path.basename(video_path)}")
+            except Exception as e:
+                print(f"  ❌ Error processing {video_path}: {e}")
+                continue
+
+    video_processor.close()
+
+    X = np.array(X)
+    y = np.array(y)
+
+    print(f"✅ Dataset created: {X.shape} sequences, {len(np.unique(y))} classes")
+    return X, y, class_mapping, reverse_mapping
+
+# Create dataset
+X, y, class_to_id, id_to_class = create_video_dataset(
+    dataset_info,
+    samples_per_class=15,  # Adjust based on available data
+    sequence_length=15
+)
+
+print(f"📊 Final dataset shape: {X.shape}")
+print(f"🎯 Classes: {list(class_to_id.keys())}")
+

@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "816897717642",
+    "project_id": "fir-6e075",
+    "storage_bucket": "fir-6e075.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816897717642:android:bfd77060c277920b294473",
+        "android_client_info": {
+          "package_name": "com.example.meeting"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkrd_oum2rnarUTYPvCKyoHuaVltSz4d8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816897717642:android:81c0eb9a0f944c87294473",
+        "android_client_info": {
+          "package_name": "com.example.new_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkrd_oum2rnarUTYPvCKyoHuaVltSz4d8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816897717642:android:eb3d724f5841e370294473",
+        "android_client_info": {
+          "package_name": "com.example.untitled14"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkrd_oum2rnarUTYPvCKyoHuaVltSz4d8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

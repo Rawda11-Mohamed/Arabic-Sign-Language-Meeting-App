@@ -1,0 +1,14 @@
+Flask
+Flask-Cors
+ultralytics
+torch
+opencv-python
+numpy
+Pillow
+tensorflow
+mediapipe
+faster-whisper
+aiortc
+websockets
+av
+huggingface_hub

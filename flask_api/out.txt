@@ -1,0 +1,491 @@
+﻿python : 2026-04-02 11:53:36.946144: I 
+tensorflow/core/util/port.cc:113] oneDNN 
+custom operations are on. You may see 
+slightly different numerical results due 
+to floating-point round-off errors from 
+different computation orders. To turn them 
+off, set the environment variable 
+`TF_ENABLE_ONEDNN_OPTS=0`.
+At line:1 char:1
++ python -c "import h5py, json, tensorflow 
+as tf; f = h5py.File('retrai ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSp    
+ecified: (2026-04-02 11:5...ONE    
+DNN_OPTS=0`.:String) [], Remote    
+Exception
+    + FullyQualifiedErrorId : Nativ    
+eCommandError
+ 
+WARNING:tensorflow:From C:\Users\Rawda\AppD
+ata\Local\Programs\Python\Python39\lib\site
+-packages\keras\src\losses.py:2976: The 
+name 
+tf.losses.sparse_softmax_cross_entropy is 
+deprecated. Please use tf.compat.v1.losses.
+sparse_softmax_cross_entropy instead.
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\Rawda\AppData\Local\Progra
+ms\Python\Python39\lib\site-packages\keras\
+src\saving\legacy\model_config.py", line 
+66, in model_from_config
+    return 
+serialization.deserialize_keras_object(
+  File "C:\Users\Rawda\AppData\Local\Progra
+ms\Python\Python39\lib\site-packages\keras\
+src\saving\legacy\serialization.py", line 
+480, in deserialize_keras_object
+    (cls, cls_config) = class_and_config_fo
+r_serialized_keras_object(
+  File "C:\Users\Rawda\AppData\Local\Progra
+ms\Python\Python39\lib\site-packages\keras\
+src\saving\legacy\serialization.py", line 
+355, in class_and_config_for_serialized_ker
+as_object
+    raise ValueError(
+ValueError: Improper config format for 
+{'name': 'functional_35', 'trainable': 
+True, 'layers': [{'class_name': 
+'InputLayer', 'config': {'dtype': 
+'float32', 'sparse': False, 'ragged': 
+False, 'name': 'input_layer_4'}, 'name': 
+'input_layer_4', 'inbound_nodes': []}, 
+{'class_name': 'Conv1D', 'config': 
+{'name': 'conv1d_12', 'trainable': True, 
+'dtype': 'float32', 'filters': 128, 
+'kernel_size': [3], 'strides': [1], 
+'padding': 'same', 'data_format': 
+'channels_last', 'dilation_rate': [1], 
+'groups': 1, 'activation': 'relu', 
+'use_bias': True, 'kernel_initializer': 
+{'module': 'keras.initializers', 
+'class_name': 'GlorotUniform', 'config': 
+{'seed': None}, 'registered_name': None}, 
+'bias_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Zeros', 'config': {}, 'registered_name': 
+None}, 'kernel_regularizer': None, 
+'bias_regularizer': None, 
+'activity_regularizer': None, 
+'kernel_constraint': None, 
+'bias_constraint': None}, 'name': 
+'conv1d_12', 'inbound_nodes': [{'args': 
+[{'class_name': '__keras_tensor__', 
+'config': {'shape': [None, 25, 100], 
+'dtype': 'float32', 'keras_history': 
+['input_layer_4', 0, 0]}}], 'kwargs': 
+{}}]}, {'class_name': 
+'BatchNormalization', 'config': {'name': 
+'batch_normalization_23', 'trainable': 
+True, 'dtype': 'float32', 'axis': -1, 
+'momentum': 0.99, 'epsilon': 0.001, 
+'center': True, 'scale': True, 
+'beta_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Zeros', 'config': {}, 'registered_name': 
+None}, 'gamma_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Ones', 'config': {}, 'registered_name': 
+None}, 'moving_mean_initializer': 
+{'module': 'keras.initializers', 
+'class_name': 'Zeros', 'config': {}, 
+'registered_name': None}, 
+'moving_variance_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Ones', 'config': {}, 'registered_name': 
+None}, 'beta_regularizer': None, 
+'gamma_regularizer': None, 
+'beta_constraint': None, 
+'gamma_constraint': None, 'synchronized': 
+False}, 'name': 'batch_normalization_23', 
+'inbound_nodes': [{'args': [{'class_name': 
+'__keras_tensor__', 'config': {'shape': 
+[None, 25, 128], 'dtype': 'float32', 
+'keras_history': ['conv1d_12', 0, 0]}}], 
+'kwargs': {'mask': None}}]}, 
+{'class_name': 'Bidirectional', 'config': 
+{'name': 'bidirectional_4', 'trainable': 
+True, 'dtype': 'float32', 'merge_mode': 
+'concat', 'layer': {'module': 
+'keras.layers', 'class_name': 'LSTM', 
+'config': {'name': 'forward_lstm_6', 
+'trainable': True, 'dtype': 'float32', 
+'return_sequences': True, 'return_state': 
+False, 'go_backwards': False, 'stateful': 
+False, 'unroll': False, 
+'zero_output_for_mask': True, 'units': 
+128, 'activation': 'tanh', 
+'recurrent_activation': 'sigmoid', 
+'use_bias': True, 'kernel_initializer': 
+{'module': 'keras.initializers', 
+'class_name': 'GlorotUniform', 'config': 
+{'seed': None}, 'registered_name': None}, 
+'recurrent_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Orthogonal', 'config': {'seed': None, 
+'gain': 1.0}, 'registered_name': None}, 
+'bias_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Zeros', 'config': {}, 'registered_name': 
+None}, 'unit_forget_bias': True, 
+'kernel_regularizer': None, 
+'recurrent_regularizer': None, 
+'bias_regularizer': None, 
+'activity_regularizer': None, 
+'kernel_constraint': None, 
+'recurrent_constraint': None, 
+'bias_constraint': None, 'dropout': 0.0, 
+'recurrent_dropout': 0.0, 'seed': None}, 
+'registered_name': None, 'build_config': 
+{'input_shape': [None, 25, 100]}}, 
+'backward_layer': {'module': 
+'keras.layers', 'class_name': 'LSTM', 
+'config': {'name': 'backward_lstm_6', 
+'trainable': True, 'dtype': 'float32', 
+'return_sequences': True, 'return_state': 
+False, 'go_backwards': True, 'stateful': 
+False, 'unroll': False, 
+'zero_output_for_mask': True, 'units': 
+128, 'activation': 'tanh', 
+'recurrent_activation': 'sigmoid', 
+'use_bias': True, 'kernel_initializer': 
+{'module': 'keras.initializers', 
+'class_name': 'GlorotUniform', 'config': 
+{'seed': None}, 'registered_name': None}, 
+'recurrent_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Orthogonal', 'config': {'seed': None, 
+'gain': 1.0}, 'registered_name': None}, 
+'bias_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Zeros', 'config': {}, 'registered_name': 
+None}, 'unit_forget_bias': True, 
+'kernel_regularizer': None, 
+'recurrent_regularizer': None, 
+'bias_regularizer': None, 
+'activity_regularizer': None, 
+'kernel_constraint': None, 
+'recurrent_constraint': None, 
+'bias_constraint': None, 'dropout': 0.0, 
+'recurrent_dropout': 0.0, 'seed': None}, 
+'registered_name': None, 'build_config': 
+{'input_shape': [None, 25, 100]}}}, 
+'name': 'bidirectional_4', 
+'inbound_nodes': [{'args': [{'class_name': 
+'__keras_tensor__', 'config': {'shape': 
+[None, 25, 100], 'dtype': 'float32', 
+'keras_history': ['input_layer_4', 0, 
+0]}}], 'kwargs': {'mask': None}}]}, 
+{'class_name': 'Conv1D', 'config': 
+{'name': 'conv1d_13', 'trainable': True, 
+'dtype': 'float32', 'filters': 256, 
+'kernel_size': [3], 'strides': [1], 
+'padding': 'same', 'data_format': 
+'channels_last', 'dilation_rate': [1], 
+'groups': 1, 'activation': 'relu', 
+'use_bias': True, 'kernel_initializer': 
+{'module': 'keras.initializers', 
+'class_name': 'GlorotUniform', 'config': 
+{'seed': None}, 'registered_name': None}, 
+'bias_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Zeros', 'config': {}, 'registered_name': 
+None}, 'kernel_regularizer': None, 
+'bias_regularizer': None, 
+'activity_regularizer': None, 
+'kernel_constraint': None, 
+'bias_constraint': None}, 'name': 
+'conv1d_13', 'inbound_nodes': [{'args': 
+[{'class_name': '__keras_tensor__', 
+'config': {'shape': [None, 25, 128], 
+'dtype': 'float32', 'keras_history': 
+['batch_normalization_23', 0, 0]}}], 
+'kwargs': {}}]}, {'class_name': 
+'BatchNormalization', 'config': {'name': 
+'batch_normalization_25', 'trainable': 
+True, 'dtype': 'float32', 'axis': -1, 
+'momentum': 0.99, 'epsilon': 0.001, 
+'center': True, 'scale': True, 
+'beta_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Zeros', 'config': {}, 'registered_name': 
+None}, 'gamma_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Ones', 'config': {}, 'registered_name': 
+None}, 'moving_mean_initializer': 
+{'module': 'keras.initializers', 
+'class_name': 'Zeros', 'config': {}, 
+'registered_name': None}, 
+'moving_variance_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Ones', 'config': {}, 'registered_name': 
+None}, 'beta_regularizer': None, 
+'gamma_regularizer': None, 
+'beta_constraint': None, 
+'gamma_constraint': None, 'synchronized': 
+False}, 'name': 'batch_normalization_25', 
+'inbound_nodes': [{'args': [{'class_name': 
+'__keras_tensor__', 'config': {'shape': 
+[None, 25, 256], 'dtype': 'float32', 
+'keras_history': ['bidirectional_4', 0, 
+0]}}], 'kwargs': {'mask': None}}]}, 
+{'class_name': 'BatchNormalization', 
+'config': {'name': 
+'batch_normalization_24', 'trainable': 
+True, 'dtype': 'float32', 'axis': -1, 
+'momentum': 0.99, 'epsilon': 0.001, 
+'center': True, 'scale': True, 
+'beta_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Zeros', 'config': {}, 'registered_name': 
+None}, 'gamma_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Ones', 'config': {}, 'registered_name': 
+None}, 'moving_mean_initializer': 
+{'module': 'keras.initializers', 
+'class_name': 'Zeros', 'config': {}, 
+'registered_name': None}, 
+'moving_variance_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Ones', 'config': {}, 'registered_name': 
+None}, 'beta_regularizer': None, 
+'gamma_regularizer': None, 
+'beta_constraint': None, 
+'gamma_constraint': None, 'synchronized': 
+False}, 'name': 'batch_normalization_24', 
+'inbound_nodes': [{'args': [{'class_name': 
+'__keras_tensor__', 'config': {'shape': 
+[None, 25, 256], 'dtype': 'float32', 
+'keras_history': ['conv1d_13', 0, 0]}}], 
+'kwargs': {'mask': None}}]}, 
+{'class_name': 'LSTM', 'config': {'name': 
+'lstm_7', 'trainable': True, 'dtype': 
+'float32', 'return_sequences': False, 
+'return_state': False, 'go_backwards': 
+False, 'stateful': False, 'unroll': False, 
+'zero_output_for_mask': False, 'units': 
+64, 'activation': 'tanh', 
+'recurrent_activation': 'sigmoid', 
+'use_bias': True, 'kernel_initializer': 
+{'module': 'keras.initializers', 
+'class_name': 'GlorotUniform', 'config': 
+{'seed': None}, 'registered_name': None}, 
+'recurrent_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Orthogonal', 'config': {'seed': None, 
+'gain': 1.0}, 'registered_name': None}, 
+'bias_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Zeros', 'config': {}, 'registered_name': 
+None}, 'unit_forget_bias': True, 
+'kernel_regularizer': None, 
+'recurrent_regularizer': None, 
+'bias_regularizer': None, 
+'activity_regularizer': None, 
+'kernel_constraint': None, 
+'recurrent_constraint': None, 
+'bias_constraint': None, 'dropout': 0.0, 
+'recurrent_dropout': 0.0, 'seed': None}, 
+'name': 'lstm_7', 'inbound_nodes': 
+[{'args': [{'class_name': 
+'__keras_tensor__', 'config': {'shape': 
+[None, 25, 256], 'dtype': 'float32', 
+'keras_history': 
+['batch_normalization_25', 0, 0]}}], 
+'kwargs': {'training': False, 'mask': 
+None}}]}, {'class_name': 
+'GlobalMaxPooling1D', 'config': {'name': 
+'global_max_pooling1d_2', 'trainable': 
+True, 'dtype': 'float32', 'data_format': 
+'channels_last', 'keepdims': False}, 
+'name': 'global_max_pooling1d_2', 
+'inbound_nodes': [{'args': [{'class_name': 
+'__keras_tensor__', 'config': {'shape': 
+[None, 25, 256], 'dtype': 'float32', 
+'keras_history': 
+['batch_normalization_24', 0, 0]}}], 
+'kwargs': {}}]}, {'class_name': 
+'BatchNormalization', 'config': {'name': 
+'batch_normalization_26', 'trainable': 
+True, 'dtype': 'float32', 'axis': -1, 
+'momentum': 0.99, 'epsilon': 0.001, 
+'center': True, 'scale': True, 
+'beta_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Zeros', 'config': {}, 'registered_name': 
+None}, 'gamma_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Ones', 'config': {}, 'registered_name': 
+None}, 'moving_mean_initializer': 
+{'module': 'keras.initializers', 
+'class_name': 'Zeros', 'config': {}, 
+'registered_name': None}, 
+'moving_variance_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Ones', 'config': {}, 'registered_name': 
+None}, 'beta_regularizer': None, 
+'gamma_regularizer': None, 
+'beta_constraint': None, 
+'gamma_constraint': None, 'synchronized': 
+False}, 'name': 'batch_normalization_26', 
+'inbound_nodes': [{'args': [{'class_name': 
+'__keras_tensor__', 'config': {'shape': 
+[None, 64], 'dtype': 'float32', 
+'keras_history': ['lstm_7', 0, 0]}}], 
+'kwargs': {'mask': None}}]}, 
+{'class_name': 'Concatenate', 'config': 
+{'name': 'concatenate', 'trainable': True, 
+'dtype': 'float32', 'axis': -1}, 'name': 
+'concatenate', 'inbound_nodes': [{'args': 
+[[{'class_name': '__keras_tensor__', 
+'config': {'shape': [None, 256], 'dtype': 
+'float32', 'keras_history': 
+['global_max_pooling1d_2', 0, 0]}}, 
+{'class_name': '__keras_tensor__', 
+'config': {'shape': [None, 64], 'dtype': 
+'float32', 'keras_history': 
+['batch_normalization_26', 0, 0]}}]], 
+'kwargs': {}}]}, {'class_name': 'Dense', 
+'config': {'name': 'dense_9', 'trainable': 
+True, 'dtype': 'float32', 'units': 256, 
+'activation': 'relu', 'use_bias': True, 
+'kernel_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'GlorotUniform', 'config': {'seed': None}, 
+'registered_name': None}, 
+'bias_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Zeros', 'config': {}, 'registered_name': 
+None}, 'kernel_regularizer': None, 
+'bias_regularizer': None, 
+'kernel_constraint': None, 
+'bias_constraint': None}, 'name': 
+'dense_9', 'inbound_nodes': [{'args': 
+[{'class_name': '__keras_tensor__', 
+'config': {'shape': [None, 320], 'dtype': 
+'float32', 'keras_history': 
+['concatenate', 0, 0]}}], 'kwargs': {}}]}, 
+{'class_name': 'BatchNormalization', 
+'config': {'name': 
+'batch_normalization_27', 'trainable': 
+True, 'dtype': 'float32', 'axis': -1, 
+'momentum': 0.99, 'epsilon': 0.001, 
+'center': True, 'scale': True, 
+'beta_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Zeros', 'config': {}, 'registered_name': 
+None}, 'gamma_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Ones', 'config': {}, 'registered_name': 
+None}, 'moving_mean_initializer': 
+{'module': 'keras.initializers', 
+'class_name': 'Zeros', 'config': {}, 
+'registered_name': None}, 
+'moving_variance_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Ones', 'config': {}, 'registered_name': 
+None}, 'beta_regularizer': None, 
+'gamma_regularizer': None, 
+'beta_constraint': None, 
+'gamma_constraint': None, 'synchronized': 
+False}, 'name': 'batch_normalization_27', 
+'inbound_nodes': [{'args': [{'class_name': 
+'__keras_tensor__', 'config': {'shape': 
+[None, 256], 'dtype': 'float32', 
+'keras_history': ['dense_9', 0, 0]}}], 
+'kwargs': {'mask': None}}]}, 
+{'class_name': 'Dropout', 'config': 
+{'name': 'dropout_11', 'trainable': True, 
+'dtype': 'float32', 'rate': 0.4, 'seed': 
+None, 'noise_shape': None}, 'name': 
+'dropout_11', 'inbound_nodes': [{'args': 
+[{'class_name': '__keras_tensor__', 
+'config': {'shape': [None, 256], 'dtype': 
+'float32', 'keras_history': 
+['batch_normalization_27', 0, 0]}}], 
+'kwargs': {'training': False}}]}, 
+{'class_name': 'Dense', 'config': {'name': 
+'dense_10', 'trainable': True, 'dtype': 
+'float32', 'units': 128, 'activation': 
+'relu', 'use_bias': True, 
+'kernel_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'GlorotUniform', 'config': {'seed': None}, 
+'registered_name': None}, 
+'bias_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Zeros', 'config': {}, 'registered_name': 
+None}, 'kernel_regularizer': None, 
+'bias_regularizer': None, 
+'kernel_constraint': None, 
+'bias_constraint': None}, 'name': 
+'dense_10', 'inbound_nodes': [{'args': 
+[{'class_name': '__keras_tensor__', 
+'config': {'shape': [None, 256], 'dtype': 
+'float32', 'keras_history': ['dropout_11', 
+0, 0]}}], 'kwargs': {}}]}, {'class_name': 
+'BatchNormalization', 'config': {'name': 
+'batch_normalization_28', 'trainable': 
+True, 'dtype': 'float32', 'axis': -1, 
+'momentum': 0.99, 'epsilon': 0.001, 
+'center': True, 'scale': True, 
+'beta_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Zeros', 'config': {}, 'registered_name': 
+None}, 'gamma_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Ones', 'config': {}, 'registered_name': 
+None}, 'moving_mean_initializer': 
+{'module': 'keras.initializers', 
+'class_name': 'Zeros', 'config': {}, 
+'registered_name': None}, 
+'moving_variance_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Ones', 'config': {}, 'registered_name': 
+None}, 'beta_regularizer': None, 
+'gamma_regularizer': None, 
+'beta_constraint': None, 
+'gamma_constraint': None, 'synchronized': 
+False}, 'name': 'batch_normalization_28', 
+'inbound_nodes': [{'args': [{'class_name': 
+'__keras_tensor__', 'config': {'shape': 
+[None, 128], 'dtype': 'float32', 
+'keras_history': ['dense_10', 0, 0]}}], 
+'kwargs': {'mask': None}}]}, 
+{'class_name': 'Dropout', 'config': 
+{'name': 'dropout_12', 'trainable': True, 
+'dtype': 'float32', 'rate': 0.3, 'seed': 
+None, 'noise_shape': None}, 'name': 
+'dropout_12', 'inbound_nodes': [{'args': 
+[{'class_name': '__keras_tensor__', 
+'config': {'shape': [None, 128], 'dtype': 
+'float32', 'keras_history': 
+['batch_normalization_28', 0, 0]}}], 
+'kwargs': {'training': False}}]}, 
+{'class_name': 'Dense', 'config': {'name': 
+'main_output', 'trainable': True, 'dtype': 
+'float32', 'units': 12, 'activation': 
+'softmax', 'use_bias': True, 
+'kernel_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'GlorotUniform', 'config': {'seed': None}, 
+'registered_name': None}, 
+'bias_initializer': {'module': 
+'keras.initializers', 'class_name': 
+'Zeros', 'config': {}, 'registered_name': 
+None}, 'kernel_regularizer': None, 
+'bias_regularizer': None, 
+'kernel_constraint': None, 
+'bias_constraint': None}, 'name': 
+'main_output', 'inbound_nodes': [{'args': 
+[{'class_name': '__keras_tensor__', 
+'config': {'shape': [None, 128], 'dtype': 
+'float32', 'keras_history': ['dropout_12', 
+0, 0]}}], 'kwargs': {}}]}], 
+'input_layers': ['input_layer_4', 0, 0], 
+'output_layers': ['main_output', 0, 0]}. 
+Expecting python dict contains 
+`class_name` and `config` as keys

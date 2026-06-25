@@ -1,0 +1,79 @@
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Soft Mint Green Background -->
+  <rect width="1080" height="1920" fill="#F0F4EF" />
+
+  <style>
+    @keyframes subtle-float {
+      0%, 100% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-15px) translateX(10px); }
+    }
+    .doodle { stroke: #4A5C53; stroke-width: 1.2; opacity: 0.08; fill: none; }
+  </style>
+
+  <!-- Dense Doodle Patterns -->
+  <g style="animation: subtle-float 20s infinite ease-in-out">
+    <!-- Row 1 -->
+    <path class="doodle" d="M100 100h40a10 10 0 0110 10v20a10 10 0 01-10 10h-30l-10 10v-10a10 10 0 01-10-10v-20a10 10 0 0110-10z" />
+    <path class="doodle" d="M300 150c0-5 5-5 5-5s5 0 5 5v20c0 5-5 5-5 5s-5 0-5-5v-20z" />
+    <circle class="doodle" cx="500" cy="120" r="15" />
+    <path class="doodle" d="M700 100c10-5 20 5 30 0" />
+    <path class="doodle" d="M900 130l20-10l10 20l-20 10z" />
+
+    <!-- Row 2 -->
+    <circle class="doodle" cx="150" cy="350" r="5" fill="#4A5C53" />
+    <path class="doodle" d="M400 300c0 10 10 20 20 20h20" />
+    <path class="doodle" d="M600 350h30v30h-30z" />
+    <path class="doodle" d="M850 320q15-10 30 0t30 0" />
+
+    <!-- Row 3 -->
+    <path class="doodle" d="M100 600l30 30 M130 600l-30 30" />
+    <circle class="doodle" cx="350" cy="550" r="25" />
+    <path class="doodle" d="M550 600h40l-20-30z" />
+    <path class="doodle" d="M800 580c0 15 15 15 15 0s15-15 15 0" />
+
+    <!-- Row 4 -->
+    <path class="doodle" d="M200 850c0-5 5-5 5-5s5 0 5 5v20" />
+    <circle class="doodle" cx="450" cy="820" r="3" fill="#4A5C53" />
+    <path class="doodle" d="M700 850h50" />
+    <path class="doodle" d="M950 800a20 20 0 100 40 20 20 0 100-40" />
+
+    <!-- Row 5 -->
+    <path class="doodle" d="M150 1100q20 20 40 0" />
+    <path class="doodle" d="M400 1050l20 40h-40z" />
+    <circle class="doodle" cx="650" cy="1100" r="12" />
+    <path class="doodle" d="M900 1080v40" />
+
+    <!-- Row 6 -->
+    <path class="doodle" d="M100 1350h40" />
+    <path class="doodle" d="M350 1300c10 0 10 10 0 10s-10-10 0-10" />
+    <path class="doodle" d="M600 1350l30-30" />
+    <circle class="doodle" cx="850" cy="1320" r="5" fill="#4A5C53" />
+
+    <!-- Row 7 -->
+    <path class="doodle" d="M200 1600c20 0 20 20 40 20" />
+    <rect class="doodle" x="450" y="1550" width="30" height="30" rx="5" />
+    <path class="doodle" d="M750 1600l20 20l20-20" />
+    <circle class="doodle" cx="950" cy="1580" r="15" />
+
+    <!-- Row 8 -->
+    <path class="doodle" d="M150 1800h30" />
+    <path class="doodle" d="M400 1850q10-10 20 0" />
+    <circle class="doodle" cx="650" cy="1820" r="3" fill="#4A5C53" />
+    <path class="doodle" d="M900 1800c0 10-10 10-10 0s10-10 10 0" />
+
+    <!-- Additional scattered elements for density -->
+    <circle class="doodle" cx="250" cy="250" r="10" />
+    <path class="doodle" d="M750 250l15 15" />
+    <path class="doodle" d="M500 450h20" />
+    <circle class="doodle" cx="950" cy="500" r="2" fill="#4A5C53" />
+    <path class="doodle" d="M250 700q10-10 20 0" />
+    <circle class="doodle" cx="600" cy="750" r="8" />
+    <path class="doodle" d="M100 950v20" />
+    <path class="doodle" d="M800 1000h10" />
+    <circle class="doodle" cx="300" cy="1250" r="4" fill="#4A5C53" />
+    <path class="doodle" d="M700 1200l10 10" />
+    <path class="doodle" d="M450 1450c5 5 5 15 0 20" />
+    <circle class="doodle" cx="150" cy="1500" r="2" fill="#4A5C53" />
+    <path class="doodle" d="M1000 1700h20" />
+  </g>
+</svg>
