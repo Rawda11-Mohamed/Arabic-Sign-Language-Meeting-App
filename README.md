@@ -4,7 +4,7 @@
 
 Ishara is an AI-powered platform designed to improve communication between Deaf and Hard-of-Hearing (DHH) individuals and hearing participants during online meetings.
 
-The system recognizes Arabic Sign Language (ArSL) gestures in real time and translates them into Arabic text while also providing Speech-to-Text functionality for two-way communication. It combines Computer Vision, Deep Learning, and WebRTC technologies to create an accessible and inclusive meeting experience. :contentReference[oaicite:0]{index=0}
+The system recognizes Arabic Sign Language (ArSL) gestures in real time and translates them into Arabic text while also providing Speech-to-Text functionality for two-way communication. It combines Computer Vision, Deep Learning, and WebRTC technologies to create an accessible and inclusive meeting experience. 
 
 ---
 
@@ -182,4 +182,5 @@ The project successfully demonstrates:
 
 ## License
 
-This project was developed as a Graduation Project for the Bachelor's Degree in Computer Science (2025–2026). It is intended for educational and research purposes. :contentReference[oaicite:2]{index=2}
+This project was developed as a Graduation Project for the Bachelor's Degree in Computer Science (2025–2026). It is intended for educational and research purposes. 
+
