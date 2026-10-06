@@ -183,4 +183,6 @@ The project successfully demonstrates:
 ## License
 
 This project was developed as a Graduation Project for the Bachelor's Degree in Computer Science (2025–2026). It is intended for educational and research purposes. 
+<img width="720" height="1604" alt="image" src="https://github.com/user-attachments/assets/8c8339af-4d51-4cc7-9b11-f82090b2b3b4" />
+
 
