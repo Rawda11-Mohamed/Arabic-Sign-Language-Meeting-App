@@ -129,7 +129,7 @@ Arabic Text Output
 
 ## Screenshots
 
-### Authentication & Home
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/ab48eecb-71ab-44ab-9510-4f520770aea1" width="200"/>
@@ -138,7 +138,7 @@ Arabic Text Output
   <img src="https://github.com/user-attachments/assets/f77b39af-85f2-4271-8ad0-036c97ba9f97" width="200"/>
 </p>
 
-### Meetings & Communication
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6aed06d1-e4ea-4d47-a726-543a69776d0a" width="200"/>
@@ -147,7 +147,7 @@ Arabic Text Output
   <img src="https://github.com/user-attachments/assets/07091a3e-8906-48cd-b35e-df51a3ce1d6a" width="200"/>
 </p>
 
-### Arabic Sign Language Recognition
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/51e0b223-09a2-4e36-95f2-15f7785276cd" width="200"/>
@@ -156,7 +156,7 @@ Arabic Text Output
   <img src="https://github.com/user-attachments/assets/9a7d4adf-614b-471a-8767-9dbb42d2e786" width="200"/>
 </p>
 
-### Additional Screens
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/18ed7459-5d73-4e33-827a-f139cee04ba5" width="200"/>
